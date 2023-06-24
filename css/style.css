@@ -134,6 +134,16 @@ body{
     background-color: #fff;
     border-radius: 20px;
     padding: 15px;
+    position:relative;
+}
+.chat_area > div > i.remove{
+    top: 0;
+    font-size: 30px;
+    color: red;
+    position: absolute;
+}
+.chat_area > div > i.remove:active{
+    color: rgba(255, 0, 0, 0.658);
 }
 .chat_area > div  .top_info{
     display: flex;
