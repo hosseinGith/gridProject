@@ -65,8 +65,11 @@ function addDiv(){
     div4.classList.add('right_info')
     i.classList.add('fa')
     i.classList.add('fa-remove')
+    i.classList.add('remove')
     p3abuotmember.classList.add('content')
-
+    i.addEventListener('click',()=>{
+        div.remove()
+    })
     
     div1.appendChild(div2)
     div1.appendChild(div4)
@@ -129,9 +132,3 @@ window.addEventListener('click',(e)=>{
         mainContainer.style.filter = 'blur(0px)'
     }
 })
-
-
-
-
-
-
