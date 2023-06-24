@@ -11,10 +11,12 @@ body{
     background-color: rgb(233, 232, 228);
     position: relative;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
+
 .contadd{
     position: fixed;
-    background-color: rgba(0, 0, 0,.5);
+    background-color: rgba(0, 0, 0,.4);
     height: 100%;
     width: 100%;
     z-index: 2;
@@ -24,12 +26,17 @@ body{
 }
 .adder{
     display: flex;
-    background-color: white;
     width: 80%;
+    height: max-content;
     justify-content: center;
     align-items: center;
-    padding:80px  ;
     flex-direction: column;
+    border-radius: 20px;
+}
+.contentAdd  input{
+    outline: 0;
+    border: 0;
+    border-bottom: 3px solid #ff0000;
 }
 .contentAdd{
     width: 380px;
@@ -43,7 +50,7 @@ body{
     position: relative;
 }
 .adder > button{
-    margin-top: 50px;
+    margin-top: 20px;
     border: 0;
     border-radius: 20px;
     background-color: rgb(212, 212, 212);
@@ -73,11 +80,13 @@ body{
     min-width: 200px;
     min-height: 100px;
     position: absolute;
-    bottom: -50px;
+    outline: 0;
+    bottom: -28px;
     right: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
+
 .container{
     width: 100%;
     display: flex;
@@ -86,8 +95,8 @@ body{
     position: relative;
 }
 .container > .search{
-    width: 80%;
-    max-width:560px ;
+    width: 98%;
+    max-width:580px ;
     max-height: 55px;
     margin:30px auto;
     padding: 10px;
@@ -95,36 +104,129 @@ body{
     justify-content: space-around;
     align-items: center;
     border-radius: 10px;
-    background-color: rgb(255, 255, 255);
-    box-shadow:  0 0 10px 0 rgba(0, 0, 0,.2);
+    background-color: rgba(0, 0, 0,.8);
+    box-shadow:  0 0 10px 0 rgba(0, 0, 0, 0.678);
+    position: relative;
 }
-
+.container > .search > label[for="seh"]{
+    width: 5%;
+    cursor: pointer;
+    color:rgb(255, 255, 255);
+}
 .container > .search > label[for="seh"]:active{
     color: #03b8ff;
 }
 
 .container > .search > input{
-    width: 60%;
+    width: 70%;
     padding: 10px;
     outline: 0;
     border: 0px solid #ff0000;
     position: relative;
 }
-.container > .search >span{
-    padding:8px 25px ;
-    background-color: #03fff2;
-    border-radius: 20px;
-    cursor:pointer;
+.link{
+    text-decoration: 0;
+    color: #fff;
+    width: 20%;
+    padding:10px 0;
+    text-align: center;
+    position: relative;
+    transition: all .3s;
+    overflow: hidden;
+    cursor: pointer;
 }
-.container > .search >span:hover{
-    background-color: #000;
-    color:#03fff2;
+.link:hover{
+    background-color: #00f7ff;
+    color: #000;
+    transition: all .2s;
+    box-shadow:0 0 20px 1px #00f7ff , 0 0 30px 1px #00f7ff,0 0 40px 1px #00f7ff , 0 0 50px 1px #00f7ff,0 0 60px 1px #00f7ff ;
 }
+
+a:hover > span{
+   visibility:hidden
+}
+
+.link > span:nth-child(1){
+    width: 30px;
+    border: 1px solid #00f7ff;
+    position: absolute;
+    top: 0;
+    left: -40px;
+    box-shadow:0 0 20px 1px #00f7ff , 0 0 30px 1px #00f7ff,0 0 40px 1px #00f7ff , 0 0 50px 1px #00f7ff,0 0 60px 1px #00f7ff ;
+    animation: span1 1s 2.4s  linear infinite;
+}
+
+
+.link > span:nth-child(2){
+    width: 30px;
+    border: 1px solid #00f7ff;
+    position: absolute;
+    bottom: 0;
+    left: 220px;
+    box-shadow:0 0 20px 1px #00f7ff , 0 0 30px 1px #00f7ff,0 0 40px 1px #00f7ff , 0 0 50px 1px #00f7ff,0 0 60px 1px #00f7ff ;
+    animation: span2 1s 1s  linear infinite;
+}
+
+.link > span:nth-child(3){
+    height: 50%;
+    border: 1px solid #00f7ff;
+    position: absolute;
+    left: 0%;
+    top: 100%;
+    box-shadow:0 0 20px 1px #00f7ff , 0 0 30px 1px #00f7ff,0 0 40px 1px #00f7ff , 0 0 50px 1px #00f7ff,0 0 60px 1px #00f7ff ;
+    animation: span3 1s 2.2s  linear infinite;
+}
+
+.link > span:nth-child(4){
+    height: 50%;
+    border: 1px solid #00f7ff;
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    box-shadow:0 0 20px 1px #00f7ff , 0 0 30px 1px #00f7ff,0 0 40px 1px #00f7ff , 0 0 50px 1px #00f7ff,0 0 60px 1px #00f7ff ;
+    animation:span4 1s 1s linear infinite;
+}
+@keyframes span1 {
+    0%{
+        transform: translateX(-200px);
+    }
+    100%{
+        
+        transform: translateX(330px);
+    }
+}
+@keyframes span2 {
+    0%{
+        transform: translateX(200px);
+    }
+    100%{
+        
+        transform: translateX(-300px);
+    }
+}
+@keyframes span3 {
+    0%{
+        transform: translateY(200px);
+    }
+    100%{
+        
+        transform: translateY(-100px);
+    }
+}
+@keyframes span4 {
+    0%{
+        transform: translateY(-100px);
+    }
+    100%{
+        
+        transform: translateY(200px);
+    }
+} 
 .chat_area{
     display: grid;
-    width: 70%;
+    width: 80%;
     margin: 60px 0;
-    grid-template-columns:  repeat(auto-fill,380px);
+    grid-template-columns:  repeat(auto-fill,360px);
     grid-auto-rows: 200px;
     justify-content: center;
     align-content: center;
@@ -135,6 +237,7 @@ body{
     border-radius: 20px;
     padding: 15px;
     position:relative;
+    overflow-y: auto;
 }
 .chat_area > div > i.remove{
     top: 0;
@@ -191,7 +294,9 @@ body{
 }
 .chat_area > div{
     position: relative;
-    overflow:hidden ;
+    overflow-x: hidden;
+    overflow-y: auto;
+
 }
 .chat_area div .content{
     width: 60%;
@@ -212,3 +317,9 @@ body{
 }
 
 
+@media screen and (max-width:480px) {
+    .contadd .adder .contentAdd {
+        width: 100%;
+        height: 200px;
+    }
+}
