@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+body{
+    height: 100vh;
+    background-color: rgb(233, 232, 228);
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+.contadd{
+    position: fixed;
+    background-color: rgba(0, 0, 0,.5);
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.adder{
+    display: flex;
+    background-color: white;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    padding:80px  ;
+    flex-direction: column;
+}
+.contentAdd{
+    width: 380px;
+    height:200px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 0 10px 1px ;
+    position: relative;
+}
+.adder > button{
+    margin-top: 50px;
+    border: 0;
+    border-radius: 20px;
+    background-color: rgb(212, 212, 212);
+    padding: 10px 30px;
+    cursor:pointer;
+}
+
+.adder > button:hover{
+    background-color: rgba(248, 215, 215, 0.8);
+}   
+ .contentAdd > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+    height: max-content;
+}
+
+
+.contentAdd > div > .search{
+    width: 100px;
+    height: 20px;
+}
+.contentAdd > textarea{
+    max-width: 200px;
+    max-height: 100px;
+    min-width: 200px;
+    min-height: 100px;
+    position: absolute;
+    bottom: -50px;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.container > .search{
+    width: 80%;
+    max-width:560px ;
+    max-height: 55px;
+    margin:30px auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow:  0 0 10px 0 rgba(0, 0, 0,.2);
+}
+
+.container > .search > label[for="seh"]:active{
+    color: #03b8ff;
+}
+
+.container > .search > input{
+    width: 60%;
+    padding: 10px;
+    outline: 0;
+    border: 0px solid #ff0000;
+    position: relative;
+}
+.container > .search >span{
+    padding:8px 25px ;
+    background-color: #03fff2;
+    border-radius: 20px;
+    cursor:pointer;
+}
+.container > .search >span:hover{
+    background-color: #000;
+    color:#03fff2;
+}
+.chat_area{
+    display: grid;
+    width: 70%;
+    margin: 60px 0;
+    grid-template-columns:  repeat(auto-fill,380px);
+    grid-auto-rows: 200px;
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
+}
+.chat_area > div{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 15px;
+}
+.chat_area > div  .top_info{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+.chat_area > div  .top_info .left_info{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+    
+
+
+
+.chat_area > div  .circle{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 8px .1px rgba(0, 0, 0,.8);
+}
+.chat_area > div:nth-child(1) .circle{
+    width: 50px;
+    height: 50px;
+    background: url(../Capture.PNG) center no-repeat;
+    background-size: 64px;
+    border-radius: 50%;
+}
+.chat_area  p{
+    display: inline-block;
+}
+.chat_area > div .left_info{
+    display: flex;
+    width: max-content;
+    justify-content: space-around;
+    align-items: center;
+}
+.chat_area > div > h3{
+    display: inline-block;
+    margin-left: 10px;
+}
+.chat_area > div{
+    position: relative;
+    overflow:hidden ;
+}
+.chat_area div .content{
+    width: 60%;
+    text-align: justify;
+    color: #000;
+}
+.chat_area::after{
+    content: '';
+    border-radius: 20px;
+    box-shadow: 0px 0 10px 1px black;
+    text-align: center;
+    line-height: 200px;
+    position: relative;
+}
+
+.show{
+    display:flex;
+}
+
+
