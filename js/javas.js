@@ -1,5 +1,6 @@
-const btnAddContent = document.querySelector('.btnAdd');
+const btnAddContent = document.querySelector('.link');
 const boxAddcontent = document.querySelector('.contadd');
+const adder = document.querySelector('.adder');
 const mainContainer = document.querySelector('.container');
 const addimg = document.querySelector('.add');
 const circle = document.querySelector('.circle');
@@ -127,7 +128,7 @@ addimg.addEventListener('click',()=>{
         boxAddcontent.classList.remove('show')
 })
 window.addEventListener('click',(e)=>{
-    if(boxAddcontent == e.target){
+    if(boxAddcontent == e.target || adder == e.target){
         boxAddcontent.classList.remove('show')
         mainContainer.style.filter = 'blur(0px)'
     }
