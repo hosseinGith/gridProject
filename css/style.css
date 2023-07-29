@@ -13,7 +13,9 @@ body{
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
 }
-
+body>*{
+    max-width:1360;
+}
 .contadd{
     position: fixed;
     background-color: rgba(0, 0, 0,.4);
